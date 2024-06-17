@@ -1,12 +1,39 @@
+<div class="button-tri">
 <?php
+$filter = isset($_GET['filter']) ? $_GET['filter'] : 'desc';
+
+switch ($filter) {
+    case 'asc':
+        $orderBy = "prix ASC";
+        break;
+    default:
+        $orderBy = "prix DESC";
+        break;
+}
+
 $connectDatabase = new PDO("mysql:host=db;dbname=wordpress", "root", "admin");
 // prepare request(SELECT * FROM posts)
-$request = $connectDatabase->prepare("SELECT * FROM post");
+$request = $connectDatabase->prepare("SELECT * FROM post ORDER BY $orderBy");
 // execute request
 $request->execute();
 // fetch ALL data from table posts
 $posts = $request->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
+<form id="filterForm" method="GET" action="">
+    <select name="filter" class="form-select" onchange="submitForm()" aria-label="Order by date">
+        <option value="desc" <?= $filter == 'desc' ? "selected" : "" ?>>Prix décroissant</option>
+        <option value="asc" <?= $filter == 'asc' ? "selected" : "" ?>>Prix croissant</option>
+    </select>
+</form>
+
+<script>
+    function submitForm() {
+        document.getElementById('filterForm').submit();
+        console.log('test submit')
+    }
+</script>
+    </div>
 
 <?php foreach ($posts as $post): ?>
 
@@ -30,7 +57,7 @@ $posts = $request->fetchAll(PDO::FETCH_ASSOC);
         <h3 class="price"><?php echo $post['prix']; ?> €</h3>
         </div>
         <button>Encheres</button>
-        <button><a href="./parts/single-post.php?id=<?php echo htmlspecialchars ($post["id"]); ?>">Details</a></button>
+        <button><a href="./single-post.php?id=<?php echo htmlspecialchars ($post["id"]); ?>">Details</a></button>
     </div>
 </div>
 <?php endforeach ?>
