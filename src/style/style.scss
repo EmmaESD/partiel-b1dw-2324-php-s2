@@ -1,0 +1,30 @@
+@import "_style-card.scss";
+
+* {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 16px;
+}
+h4 {
+  font-size: 12px;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
