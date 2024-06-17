@@ -38,6 +38,23 @@
   justify-content: center;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: center;
+  border: solid 1px;
+  padding: 20px;
+}
+
 * {
   margin: 0;
 }
