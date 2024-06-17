@@ -30,6 +30,7 @@ $posts = $request->fetchAll(PDO::FETCH_ASSOC);
         <h3 class="price"><?php echo $post['prix']; ?> €</h3>
         </div>
         <button>Encheres</button>
+        <button><a href="./parts/single-post.php?id=<?php echo htmlspecialchars ($post["id"]); ?>">Details</a></button>
     </div>
 </div>
 <?php endforeach ?>
