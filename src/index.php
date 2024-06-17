@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <?php require_once './parts/post-list.php'?>
 </body>
 </html>
