@@ -1,0 +1,19 @@
+.content-create {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+
+  .form-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+}
