@@ -19,6 +19,25 @@
   gap: 20px;
 }
 
+.content-create {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+.content-create .form-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-create form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
 * {
   margin: 0;
 }
