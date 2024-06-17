@@ -7,9 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <button><a href="./index.php">Voir les billets</a></button>
+        <button><a href="./parts/create-post.php">Ajouter un billet</a></button>
+    </nav>
     <div class="post-list">
         <?php require_once './parts/post-list.php'?>
     </div>
+
     
 </body>
 </html>
