@@ -8,12 +8,11 @@
                             <input type="text" class="equipe2" placeholder="Equipe 2" name="equipe2">
                         </div>
                         <div class="cat-groupe">
-                            <select name="categorie" id="categorie" placeholder="Categorie">
-                                <option value="Catégorie">Catégorie</option>
-                                    <?php foreach ($enum_values as $value): ?>
-                                <option value="<?php echo htmlspecialchars($value); ?>"><?php echo htmlspecialchars($value); ?></option>
-                                    <?php endforeach; ?>
-                            </select>
+                        <select name="categorie" id="categorie" required>
+                            <option value="" disabled selected>Catégorie</option>
+                            <option value="Hommes">Hommes</option>
+                            <option value="Femmes">Femmes</option>
+                        </select>
                             <input type="text" class="groupe" name="groupe" placeholder="Groupe">              
                         </div>
                         <div class="infos-match">
