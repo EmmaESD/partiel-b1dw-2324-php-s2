@@ -14,14 +14,30 @@ if (isset($_GET['id'])) {
 
         if ($card) { ?>
 
-    <h2>Détails de la carte</h2>
-    <h3><?php echo htmlspecialchars($card['equipe1']) . ' vs ' . htmlspecialchars($card['equipe2']); ?></h3>
-    <p>Catégorie: <?php echo htmlspecialchars($card['categorie']); ?></p>
-    <p>Groupe: <?php echo htmlspecialchars($card['groupe']); ?></p>
-    <p>Date et Heure: <?php echo htmlspecialchars($card['date_heure']); ?></p>
-    <p>Prix: <?php echo htmlspecialchars($card['prix']); ?></p>
-    <p>Lieu: <?php echo htmlspecialchars($card['lieu']); ?></p>
-    <p>Description: <?php echo htmlspecialchars($card['description']); ?></p>
+        <div class="container">
+
+        <div class="post-container">
+
+<h1>Détails du billet</h1>
+<div class="title-date">
+<h3><?php echo htmlspecialchars($card['equipe1']) . ' vs ' . htmlspecialchars($card['equipe2']); ?></h3>
+<h4>Date et Heure: <?php echo htmlspecialchars($card['date_heure']); ?></h4>
+</div>
+<div class="cat-gpe">
+<h3>Catégorie: <?php echo htmlspecialchars($card['categorie']); ?></h3>
+<h3>Groupe: <?php echo htmlspecialchars($card['groupe']); ?></h3>
+</div>
+
+
+<p>Prix: <?php echo htmlspecialchars($card['prix']); ?></p>
+<p>Lieu: <?php echo htmlspecialchars($card['lieu']); ?></p>
+<p>Description: <?php echo htmlspecialchars($card['description']); ?></p>
+</div>
+        </div>
+    
+    
+
+    
 </body>
 </html>
 <?php
